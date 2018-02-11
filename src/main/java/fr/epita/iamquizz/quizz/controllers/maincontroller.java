@@ -61,32 +61,30 @@ public class maincontroller {
             return "homePage";
         }
 
-        AppUser usr = service.checklogin(user);
+        if(user.getUserLoginId().equalsIgnoreCase("omkar")&&user.getUserpassword().equalsIgnoreCase("123456")){
+            session.setAttribute("user", user);
+                model.addAttribute("User", user);
+               model.addAttribute("quizlist", service.getallquizList());
 
-        if (usr != null) {
-            if (usr.getUserRole().endsWith("student")) {
-                session.setAttribute("user", usr);
-                model.addAttribute("User", usr);
-
-                model.addAttribute("quizlist", service.getallquizList());
-
-                return "homes";
-            } else if (usr.getUserRole().endsWith("professor")) {
-                model.addAttribute("User", usr);
-                session.setAttribute("user", usr);
-
-                ArrayList<Result> resultarray = service.getDashbardData();
-                model.addAttribute("resultarray", resultarray);
-
-                return "homeP";
-            } else {
-                model.addAttribute("User", new AppUser());
-                return "homePage";
-            }
-        } else {
+               return "homes";
+              
+        }else if(user.getUserLoginId().equalsIgnoreCase("thomas")&&user.getUserpassword().equalsIgnoreCase("123456")){
+             session.setAttribute("user", user);
+               model.addAttribute("User", user);
+               ArrayList<Result> resultarray = service.getDashbardData();
+              model.addAttribute("resultarray", resultarray);
+               return "homeP";
+        }else{
+              model.addAttribute("error", "please enter username and password");
             model.addAttribute("User", new AppUser());
             return "homePage";
         }
+        
+        
+        
+        
+
+
         
     }
 
@@ -144,7 +142,7 @@ public class maincontroller {
             qs.setOption_two(qs.getOption_two().substring(1, qs.getOption_two().length()));
             qs.setOption_three(qs.getOption_three().substring(1, qs.getOption_three().length()));
             qs.setOption_four(qs.getOption_four().substring(1, qs.getOption_four().length()));
-            qs.setOption_five(qs.getOption_five().substring(1, qs.getOption_five().length()));
+
 
             qstions2.add(qs);
         }
@@ -185,7 +183,7 @@ public class maincontroller {
             model.addAttribute("message", "You have scored :" + correct_answers + "/" + totalquestions);
         } catch (Exception e) {
             e.printStackTrace();
-            model.addAttribute("message", "un able to submit quiz! only one quiz can be attend");
+            model.addAttribute("message", "un able to submit because you have completed already a chance ");
         }
         return "message";
     }
@@ -199,7 +197,7 @@ public class maincontroller {
 
         model.addAttribute("User", usr);
         session.setAttribute("user", usr);
-        return "homep";
+        return "homeP";
     }
 
     @RequestMapping("shome")
@@ -207,7 +205,7 @@ public class maincontroller {
         AppUser usr = (AppUser) session.getAttribute("user");
         model.addAttribute("User", usr);
         model.addAttribute("quizlist", service.getallquizList());
-        return "studenthome";
+        return "homes";
     }
 
 }
