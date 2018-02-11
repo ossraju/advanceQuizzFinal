@@ -10,6 +10,6 @@ requirements :
 NetBeans IDE 8.2
 database: Derby
 
-Technologies implemented: Hibernate Maven Log4J Servlet.
+Technologies implemented: Hibernate Maven Log4J Servlet springs.
 
 Successfull run project you need to input the student and professor login credentials in the database,then only project run successfully.
