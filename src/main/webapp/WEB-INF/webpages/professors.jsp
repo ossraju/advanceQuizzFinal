@@ -46,11 +46,11 @@
         <li ><a href="pdashboard">DashBoard</a></li>
       <li><a href="addq">Add Questions</a></li>
       <li><a href="createqz">Create Quiz</a></li>
-<!--      <li><a href="#">Page 3</a></li>-->
+
     </ul>
-<!--      <a href="#" class="right-button">logout</a>-->
+
 <p  class="right-button">${User.userName} &nbsp;&nbsp;
-    <a href="home"> <button type="button" class="btn btn-default btn-sm">
+    <a href="/iamquizz/"> <button type="button" class="btn btn-default btn-sm">
           <span class="glyphicon glyphicon-user"></span> logout
         </button></a>
       </p>
