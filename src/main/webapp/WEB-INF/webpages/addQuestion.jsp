@@ -7,7 +7,8 @@
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
 <!DOCTYPE html>
 <html>
-    <head>
+    <head >
+        
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <script>
             
@@ -84,11 +85,11 @@
         <style>
             
         label {
-    color: rgba(4, 32, 55,0.5);
+    color: rgba(0, 32, 0,0.5);
     font-style: bold;
 }
 </style>
-           <%@include file="professor.jsp" %>
+           <%@include file="professors.jsp" %>
     </head>
     <body>
      
