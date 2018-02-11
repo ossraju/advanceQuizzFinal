@@ -10,6 +10,11 @@ requirements :
 NetBeans IDE 8.2
 database: Derby
 
-Technologies implemented: Hibernate Maven Log4J Servlet springs.
+Technologies implemented: Hibernate Maven Log4J Servlet springs MVC.
 
 Successfull run project you need to input the student and professor login credentials in the database,then only project run successfully.
+
+
+If DataBase mysql: static login credentails are provided in "maincontroller" file 
+Professor Crendentials username : thomas ; password : 123456
+Student Credentials username : omkar ; password : 123456
