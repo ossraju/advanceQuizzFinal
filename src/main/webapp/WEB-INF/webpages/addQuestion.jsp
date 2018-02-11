@@ -103,7 +103,7 @@
       <form:input path="question_title" type="text" class="form-control" id="questiontext" placeholder="Question text" name="questiontext"/>
     </div>
       <br/><br/>
-      <font color="red">* first letter should be +(plus) for positive options -(minus) for negative options </font>
+      <font color="red"><h2>* indicate should be +(plus)right answer -(minus) wrong answer</h2> </font>
     <div class="form-group">
       <label for="option_one">Option 1.</label>
       <form:input path="option_one"  class="form-control" id="option_one" placeholder="option one" name="option_one"/>
