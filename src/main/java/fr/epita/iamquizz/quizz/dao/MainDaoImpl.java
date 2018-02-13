@@ -56,8 +56,7 @@ public class MainDaoImpl implements MainDao {
             return null;
         }
 
-//        String status="professor";//dao action
-        //  return u; 
+
     }
 
     @Override
@@ -168,7 +167,7 @@ public class MainDaoImpl implements MainDao {
         ArrayList<QuizQuestion> qtnlist = (ArrayList<QuizQuestion>) cr.list();
         for (QuizQuestion qn : qtnlist) {
             if (qn.getQuestion_id() == Integer.parseInt(question_id)) {
-                //retlist.add(qn);
+                
                 qstn = qn;
             }
         }
@@ -191,8 +190,8 @@ public class MainDaoImpl implements MainDao {
             
             
             String ans = "+" + answers[i];
-            if (ans.equalsIgnoreCase(qstn.getOption_one()) || ans.equalsIgnoreCase(qstn.getOption_two()) || ans.equalsIgnoreCase(qstn.getOption_three()) || ans.equalsIgnoreCase(qstn.getOption_four()) || ans.equalsIgnoreCase(qstn.getOption_five())) {
-                //  retvalue=true;
+            if (ans.equalsIgnoreCase(qstn.getOption_one()) || ans.equalsIgnoreCase(qstn.getOption_two()) || ans.equalsIgnoreCase(qstn.getOption_three()) || ans.equalsIgnoreCase(qstn.getOption_four())) {
+               
             } else {
                 retvalue = false;
             }
@@ -288,7 +287,7 @@ public class MainDaoImpl implements MainDao {
         }
         x = x + 1;
        s.setStudentid(x);
-       // p.setPregisteredAt(new Date());
+      
         u.setRoleId(x + "");
         session.save(s);
          
