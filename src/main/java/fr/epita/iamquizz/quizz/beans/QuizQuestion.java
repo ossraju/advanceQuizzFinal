@@ -36,8 +36,7 @@ public class QuizQuestion {
     private String option_three;
         @Column(name = "option_four")
     private String option_four;
-          @Column(name = "option_five")
-    private String option_five;
+          
               @Column(name = "created_by")
     private String created_by;
                      @Column(name = "created_timestamp")
@@ -91,13 +90,7 @@ public class QuizQuestion {
         this.option_four = option_four;
     }
 
-    public String getOption_five() {
-        return option_five;
-    }
-
-    public void setOption_five(String option_five) {
-        this.option_five = option_five;
-    }
+    
 
     public String getCreated_by() {
         return created_by;
