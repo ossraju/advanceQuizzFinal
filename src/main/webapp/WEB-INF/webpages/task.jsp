@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <title>JSP Page</title>
     </head>
-    <%@include file="headers.jsp" %>
+    <%@include file="student.jsp" %>
     <body>
         
         <div class="container">
@@ -43,7 +43,7 @@
                                             <li><input type="checkbox" name="${question.question_id}" value="${question.option_two}"/> ${question.option_two}</li>
                                             <li><input type="checkbox" name="${question.question_id}" value="${question.option_three}"/> ${question.option_three}</li>
                                             <li><input type="checkbox" name="${question.question_id}" value="${question.option_four}"/> ${question.option_four}</li>
-                                            <li><input type="checkbox" name="${question.question_id}" value="${question.option_five}"/> ${question.option_five}</li>
+                                            
 
                                         </ol>
 
