@@ -43,7 +43,7 @@ public class MainDaoImpl implements MainDao {
 
     @Override
     public AppUser getUserstatus(String userid, String password) {
-        System.out.println("com.quiz.quizmanager.dao.HomeDao.getUserstatus()");
+        System.out.println("fr.epita.iamquizz.quizz.dao.HomeDao.getUserstatus()");
 
         Session session = factory.getCurrentSession();
 
